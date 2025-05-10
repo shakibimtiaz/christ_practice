@@ -2,7 +2,7 @@
 // import 'package:christ_practice/run_vertical/screen/run_vertical_screen.dart';
 // import 'package:christ_practice/update_run/view/update_run_screen.dart' show UpdateRunScreen;
 //import 'package:christ_practice/run_tracker/screen/run_tracker_screen.dart' show RunTrackerScreen;
-import 'package:christ_practice/updated_run_vertical/view/Updated_run_vertical_screen.dart' show UpdatedRunVerticalScreen;
+import 'package:christ_practice/update_run/view/update_run_screen.dart' show UpdateRunScreen;
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: UpdatedRunVerticalScreen(),
+      home: UpdateRunScreen(),
     );
   }
 }

@@ -50,14 +50,31 @@ class UpdateRunScreen extends StatelessWidget {
             height: 20,
           ), 
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+               Obx(
+              () => Text(
+                'Time: ${controller.elapsedTime.value}',
+                style: const TextStyle(fontSize: 24),
+              ),
+            ),
+              Obx(
+              () => Text(
+                'Distance: ${controller.distance.value.toStringAsFixed(0)} m',
+                style: const TextStyle(fontSize: 24),
+              ),
+            ),
+            ],
+          ), 
+          Row(
             mainAxisAlignment:  MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
-                  onPressed: controller.startAnimation,
+                  onPressed: controller.startRun,
                   child: const Text('Start'),
                 ),
               ElevatedButton(
-                  onPressed: controller.stopAnimation,
+                  onPressed: controller.stopRun,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,
                   ),
